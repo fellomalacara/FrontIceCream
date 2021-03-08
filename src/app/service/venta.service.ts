@@ -13,7 +13,7 @@ export class VentaService {
     })
   };
 
-  public url = "http://localhost:3100/api"
+  public url = "https://icecreammexico.herokuapp.com/api"
 
   constructor(private _http : HttpClient) { }
 
