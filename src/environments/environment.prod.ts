@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  backend:'https://icecreammexico.herokuapp.com',
+  backendWs:'wss://icecreammexico.herokuapp.com'
 };
