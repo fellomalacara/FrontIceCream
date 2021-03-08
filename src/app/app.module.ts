@@ -1,7 +1,7 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -26,6 +26,7 @@ import { VentaComponent } from './venta/venta.component';
     ProductoComponent,
     VentaComponent,
     VentaComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -33,9 +34,10 @@ import { VentaComponent } from './venta/venta.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-  RouterModule.forRoot(appRoutes)
+  RouterModule.forRoot(appRoutes),
+  
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
